@@ -1,44 +1,8 @@
-:root{
-    color-scheme: light dark;
-
-    --bg: #ffffff;
-    --text: #1f2328;
-    --box-border: #d8dee4;
-    --input-bg: #ffffff;
-    --input-border: #d0d7de;
-    --focus: #0969da;
-    --focus-ring: rgba(9, 105, 218, 0.3);
-    --green: #1f883d;
-    --green-hover: #1a7f37;
-    --link: #0969da;
-    --social-bg: #f6f8fa;
-    --social-hover: #eef1f4;
-    --line: #d0d7de;
-}
-
-@media (prefers-color-scheme: dark){
-    :root{
-        --bg: #0d1117;
-        --text: #e6edf3;
-        --box-border: #30363d;
-        --input-bg: #0d1117;
-        --input-border: #30363d;
-        --focus: #388bfd;
-        --focus-ring: rgba(56, 139, 253, 0.4);
-        --green: #238636;
-        --green-hover: #2ea043;
-        --link: #4493f8;
-        --social-bg: #21262d;
-        --social-hover: #30363d;
-        --line: #30363d;
-    }
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 body{
@@ -47,13 +11,13 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem 0;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: #0d1117;
+    color: #e6edf3;
 }
 
 #main{
     width: 100%;
-    max-width: 308px;
+    max-width: 340px;
     text-align: center;
 }
 
@@ -67,17 +31,22 @@ img{
 }
 
 #signin{
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     font-size: 24px;
     font-weight: 300;
     letter-spacing: -0.5px;
 }
 
+a{
+    color: #4493f8;
+    text-decoration: none;
+}
+
+.small{
+    font-size: 12px;
+}
+
 #form{
-    background-color: var(--bg);
-    border: 1px solid var(--box-border);
-    border-radius: 6px;
-    padding: 16px;
     text-align: left;
 }
 
@@ -88,56 +57,42 @@ label{
     margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="password"]{
+input{
     width: 100%;
-    padding: 5px 12px;
+    padding: 8px 12px;
     font-size: 14px;
-    line-height: 20px;
-    color: var(--text);
-    background-color: var(--input-bg);
-    border: 1px solid var(--input-border);
+    color: #e6edf3;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
     border-radius: 6px;
     margin-bottom: 16px;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus{
+input:focus{
     outline: none;
-    border-color: var(--focus);
-    box-shadow: 0 0 0 3px var(--focus-ring);
+    border-color: #388bfd;
+    box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.4);
 }
 
-.pass-row{
+.row{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
 }
 
-.forgot{
-    font-size: 12px;
-    color: var(--link);
-    text-decoration: none;
-}
-
-.forgot:hover{
-    text-decoration: underline;
-}
-
-#submit{
+.btn{
     width: 100%;
-    padding: 5px 16px;
+    padding: 10px 16px;
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
-    background-color: var(--green);
-    border: 1px solid rgba(31, 35, 40, 0.15);
+    background-color: #238636;
+    border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
-#submit:hover{
-    background-color: var(--green-hover);
+.btn:hover{
+    background-color: #2ea043;
 }
 
 .divider{
@@ -151,34 +106,31 @@ input[type="password"]:focus{
     content: "";
     flex: 1;
     height: 1px;
-    background-color: var(--line);
+    background-color: #30363d;
 }
 
 .divider span{
     padding: 0 16px;
     font-size: 14px;
-    color: var(--text);
 }
 
-.social-btn{
+.social{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: 100%;
-    padding: 5px 16px;
+    padding: 10px 16px;
     margin-bottom: 12px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--text);
-    background-color: var(--social-bg);
-    border: 1px solid var(--box-border);
+    color: #e6edf3;
+    background-color: #21262d;
+    border: 1px solid #30363d;
     border-radius: 6px;
-    text-decoration: none;
 }
 
-.social-btn:hover{
-    background-color: var(--social-hover);
+.social:hover{
+    background-color: #30363d;
 }
 
 #create{
@@ -186,44 +138,29 @@ input[type="password"]:focus{
     font-size: 14px;
 }
 
-#create a{
-    color: var(--link);
-    text-decoration: none;
-}
-
-#create a:hover{
-    text-decoration: underline;
-}
-
 #passkey{
     display: block;
     margin-top: 16px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--link);
-    text-decoration: none;
-}
-
-#passkey:hover{
-    text-decoration: underline;
 }
 
 #footer{
     margin-top: auto;
     width: 100%;
+    border-top: 1px solid #21262d;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px 16px;
-    padding: 2.5rem 1rem;
+    gap: 8px 24px;
+    padding: 1.5rem 1rem;
+    font-size: 12px;
 }
 
 #footer a{
-    font-size: 12px;
-    color: var(--link);
-    text-decoration: none;
+    color: #8b949e;
 }
 
 #footer a:hover{
-    text-decoration: underline;
+    color: #4493f8;
 }
