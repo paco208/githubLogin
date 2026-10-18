@@ -174,3 +174,18 @@ input:focus{
 #footer a:hover{
     color: #4493f8;
 }
+
+.swal2-popup{
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.swal2-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.swal2-confirm{
+    font-weight: 500;
+}
