@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kopija GitHub registracijske strani">
+    <meta name="author" content="Jakob">
+    <title>Sign up for GitHub</title>
+    <link rel="stylesheet" href="style/signup.css">
+    <link rel="icon" type="image/x-icon" href="style/images/github-white-icon.svg">
+</head>
+
+<body>
+    <div id="aside">
+        <img src="style/images/github-white-icon.svg" alt="GitHub logo" width="32" height="32">
+        <h1 id="aside-title">Create your free account</h1>
+        <p id="aside-text">Explore GitHub's core features for individuals and organizations.</p>
+
+        <p id="included">See what's included</p>
+
+        <ul id="features">
+            <li>
+                <span class="tick">&#10003;</span>
+                <div>
+                    <strong>Access to GitHub Copilot</strong>
+                    <p>Increase your productivity and accelerate software development.</p>
+                </div>
+            </li>
+            <li>
+                <span class="tick">&#10003;</span>
+                <div>
+                    <strong>Unlimited repositories</strong>
+                    <p>Collaborate securely on public and private projects.</p>
+                </div>
+            </li>
+            <li>
+                <span class="tick">&#10003;</span>
+                <div>
+                    <strong>Integrated code reviews</strong>
+                    <p>Boost code quality with built-in review tools.</p>
+                </div>
+            </li>
+            <li>
+                <span class="tick">&#10003;</span>
+                <div>
+                    <strong>Automated workflows</strong>
+                    <p>Save time with CI/CD integrations and GitHub Actions.</p>
+                </div>
+            </li>
+            <li>
+                <span class="tick">&#10003;</span>
+                <div>
+                    <strong>Community support</strong>
+                    <p>Connect with developers worldwide for instant feedback and insights.</p>
+                </div>
+            </li>
+        </ul>
+
+        <div id="mascots">
+            <img src="style/images/tres-amigos@2x.webp" alt="GitHub mascots">
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="top">
+            Already have an account? <a href="index.html">Sign in &rarr;</a>
+        </div>
+
+        <div id="main">
+            <h2 id="signup">Sign up for GitHub</h2>
+
+            <button type="button" class="social">
+                <img src="style/images/google-icon-logo-svgrepo-com.svg" alt="Google logo" width="16" height="16">
+                Continue with Google
+            </button>
+
+            <button type="button" class="social">
+                <img src="style/images/Apple_logo_white.svg" alt="Apple logo" width="16" height="16">
+                Continue with Apple
+            </button>
+
+            <div class="divider"><span>or</span></div>
+
+            <form id="signup-form" action="#" method="post">
+                <div class="field">
+                    <label for="email">Email<sup>*</sup></label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="field">
+                    <label for="pass">Password<sup>*</sup></label>
+                    <input type="password" id="pass" name="pass" placeholder="Password" minlength="8" required>
+                    <p class="hint">Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter.</p>
+                </div>
+
+                <div class="field">
+                    <label for="username">Username<sup>*</sup></label>
+                    <input type="text" id="username" name="username" placeholder="Username" pattern="[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*" required>
+                    <p class="hint">Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.</p>
+                </div>
+
+                <div class="field">
+                    <label for="country">Your Country/Region<sup>*</sup></label>
+                    <select id="country" name="country" required>
+                        <option value="AT">Austria</option>
+                        <option value="HR">Croatia</option>
+                        <option value="DE">Germany</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IT">Italy</option>
+                        <option value="SI" selected>Slovenia</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                    </select>
+                    <p class="hint">For compliance reasons, we're required to collect country information to send you occasional updates and announcements.</p>
+                </div>
+
+                <h3 id="preferences">Email preferences</h3>
+
+                <div class="check">
+                    <input type="checkbox" id="updates" name="updates">
+                    <label for="updates">Receive occasional product updates and announcements</label>
+                </div>
+
+                <button type="submit" class="btn">Create account &rsaquo;</button>
+            </form>
+
+            <p id="terms">
+                By creating an account, you agree to the <a href="#">Terms of Service</a>.
+                For more information about GitHub's privacy practices, see the <a href="#">GitHub Privacy Statement</a>.
+                We'll occasionally send you account-related emails.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.all.min.js"></script>
+    <script src="script/signup.js"></script>
+</body>
+
+</html>

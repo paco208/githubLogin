@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    color: #4493f8;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#aside{
+    width: 40%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 48px 0;
+    background-color: #010409;
+    border-right: 1px solid #30363d;
+}
+
+#aside-title{
+    margin-top: 32px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+#aside-text{
+    margin-top: 8px;
+    font-size: 16px;
+    color: #8b949e;
+}
+
+#included{
+    margin-top: 32px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #30363d;
+}
+
+#features{
+    list-style: none;
+    margin-top: 16px;
+}
+
+#features li{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+#features p{
+    margin-top: 2px;
+    color: #8b949e;
+}
+
+.tick{
+    color: #8b949e;
+    font-weight: 600;
+}
+
+#mascots{
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+#mascots img{
+    display: block;
+    width: 100%;
+}
+
+#content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 48px;
+}
+
+#top{
+    text-align: right;
+    font-size: 14px;
+}
+
+#main{
+    width: 100%;
+    max-width: 340px;
+    margin: 48px auto 0;
+}
+
+#signup{
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e6edf3;
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.social img{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.social:hover{
+    background-color: #30363d;
+}
+
+.divider{
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #30363d;
+}
+
+.divider span{
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+.field{
+    margin-bottom: 16px;
+}
+
+label{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+label sup{
+    font-size: 10px;
+    margin-left: 1px;
+}
+
+input,
+select{
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #e6edf3;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+}
+
+input::placeholder{
+    color: #8b949e;
+}
+
+input:focus,
+select:focus{
+    outline: none;
+    border-color: #388bfd;
+    box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.4);
+}
+
+.hint{
+    margin-top: 8px;
+    font-size: 12px;
+    color: #8b949e;
+}
+
+#preferences{
+    margin: 24px 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.check{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.check input{
+    width: auto;
+    height: auto;
+    margin-top: 2px;
+}
+
+.check label{
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #238636;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #2ea043;
+}
+
+#terms{
+    margin-top: 16px;
+    font-size: 12px;
+    color: #8b949e;
+}
+
+@media (max-width: 1000px){
+    #aside{
+        display: none;
+    }
+}
+
+.swal2-popup{
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.swal2-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.swal2-confirm{
+    font-weight: 500;
+}
