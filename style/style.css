@@ -36,6 +36,12 @@ img{
     font-weight: 600;
 }
 
+#reset-text{
+    margin-top: 16px;
+    font-size: 14px;
+    color: #e6edf3;
+}
+
 a{
     color: #4493f8;
     text-decoration: none;
